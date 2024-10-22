@@ -26,7 +26,7 @@
             overflow: hidden;
         }
         .login-container .left {
-            background-image: url('추정MW.png');
+            background-image: url('C:\Users\xodid\Desktop\새 폴더추정MW.png');
             background-size: cover;
             background-position: center;
             width: 50%;
