@@ -24,14 +24,13 @@
             border-radius: 8px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-        }
         .login-container .left {
-            background-image: url('C:\Users\xodid\Desktop\새 폴더추정MW.png');
-            background-size: cover;
-            background-position: center;
-            width: 50%;
-            position: relative;
-        }
+    background-image: url('images/추정MW.png'); /* 이미지 폴더에 넣었다고 가정 */
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    position: relative;
+}
         .login-container .left .info {
             position: absolute;
             bottom: 20px;
