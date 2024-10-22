@@ -26,7 +26,7 @@
             overflow: hidden;
         }
         .login-container .left {
-            background-image: url('images/추정MW.png'); /* 경로 수정 */
+            background-image: url('추정MW.png'); /* 이미지 파일이 HTML 파일과 같은 폴더에 있다고 가정 */
             background-size: cover;
             background-position: center;
             width: 50%;
@@ -119,30 +119,30 @@
     </div>
 
    <script>
-// 미리 정해진 아이디와 비밀번호 목록 (객체 배열 형태로 추가)
-const users = [
-    { username: '추리의정석', password: '1234' },
-    { username: '미스틱워크', password: '5678' },
-    { username: '파트너십', password: 'abcd' }
-];
+    // 미리 정해진 아이디와 비밀번호 목록 (객체 배열 형태로 추가)
+    const users = [
+        { username: '추리의정석', password: '1234' },
+        { username: '미스틱워크', password: '5678' },
+        { username: '파트너십', password: 'abcd' }
+    ];
 
-function login() {
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+    function login() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
 
-    // 입력한 값이 사용자 목록에 있는지 확인
-    const validUser = users.find(user => user.username === username && user.password === password);
+        // 입력한 값이 사용자 목록에 있는지 확인
+        const validUser = users.find(user => user.username === username && user.password === password);
 
-    if (validUser) {
-        // 로그인 성공 시
-        alert('로그인 성공!');
-        // 원하는 페이지로 이동
-        window.location.href = 'your-next-page.html';
-    } else {
-        // 로그인 실패 시
-        alert('아이디 또는 비밀번호가 올바르지 않습니다.');
+        if (validUser) {
+            // 로그인 성공 시
+            alert('로그인 성공!');
+            // 원하는 페이지로 이동
+            window.location.href = 'your-next-page.html';
+        } else {
+            // 로그인 실패 시
+            alert('아이디 또는 비밀번호가 올바르지 않습니다.');
+        }
     }
-}
-</script>
+   </script>
 </body>
 </html>
