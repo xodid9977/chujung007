@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=10">
+    <title>파워플래너 로그인</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .login-container .left {
+            background-image: url('추정MW.png');
+            background-size: cover;
+            background-position: center;
+            width: 50%;
+            position: relative;
+        }
+        .login-container .left .info {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .login-container .right {
+            padding: 40px;
+            width: 50%;
+        }
+        .right h2 {
+            color: #007bff;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .form-group input[type="button"] {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        .form-group input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+        .links {
+            margin-top: 20px;
+        }
+        .links a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="left">
+            <div class="info">똑똑한 전기사용의 시작 <br> 파워플래너</div>
+        </div>
+        <div class="right">
+            <h2>로그인</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">로그인 ID</label>
+                    <input type="text" id="username" name="username" placeholder="사용자 이름/아이디">
+                </div>
+                <div class="form-group">
+                    <label for="password">비밀번호</label>
+                    <input type="password" id="password" name="password" placeholder="비밀번호">
+                </div>
+                <div class="form-group">
+                    <input type="button" value="로그인" onclick="login()">
+                </div>
+            </form>
+            <div class="links">
+                <a href="#">비밀번호 재설정</a> | <a href="#">회원가입</a>
+            </div>
+            <div class="footer">
+                Copyright © 2016 KEPCO. All Rights Reserved
+            </div>
+        </div>
+    </div>
+
+   <script>
+// 미리 정해진 아이디와 비밀번호 목록 (객체 배열 형태로 추가)
+const users = [
+    { username: '추리의정석', password: '1234' },
+    { username: '미스틱워크', password: '5678' },
+    { username: '파트너십', password: 'abcd' }
+];
+
+function login() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // 입력한 값이 사용자 목록에 있는지 확인
+    const validUser = users.find(user => user.username === username && user.password === password);
+
+    if (validUser) {
+        // 로그인 성공 시
+        alert('로그인 성공!');
+        // 원하는 페이지로 이동
+        window.location.href = 'your-next-page.html';
+    } else {
+        // 로그인 실패 시
+        alert('아이디 또는 비밀번호가 올바르지 않습니다.');
+    }
+}
+</script>
+</body>
+</html>
