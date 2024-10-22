@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=10">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>추정MW 로그인</title>
     <style>
         body {
@@ -24,13 +24,14 @@
             border-radius: 8px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             overflow: hidden;
+        }
         .login-container .left {
-    background-image: url('images/추정MW.png'); /* 이미지 폴더에 넣었다고 가정 */
-    background-size: cover;
-    background-position: center;
-    width: 50%;
-    position: relative;
-}
+            background-image: url('images/추정MW.png'); /* 경로 수정 */
+            background-size: cover;
+            background-position: center;
+            width: 50%;
+            position: relative;
+        }
         .login-container .left .info {
             position: absolute;
             bottom: 20px;
