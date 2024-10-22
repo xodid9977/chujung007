@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=10">
-    <title>파워플래너 로그인</title>
+    <title>추정MW 로그인</title>
     <style>
         body {
             font-family: Arial, sans-serif;
